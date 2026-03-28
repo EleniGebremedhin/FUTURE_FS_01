@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belly</title>
+
+    <style>
+      body {
+        background: goldenrod;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid purple;
+        background: purple;
+        color: black;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: silver;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 700px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      .dark-button {
+        font-size: 15px;
+        background: black;
+        color: white;
+        padding: 5 7px;
+      }
+      .dark-button:hover {
+        background: white;
+        color: black;
+      }
+      .bellydance-one {
+        transition: opacity 150ms ease-in;
+      }
+      .bellydance-one:hover {
+        filter: contrast(70%);
+        transform: scale(1.5);
+      }
+      .bellydance-two {
+        transition: opacity 150ms ease-in;
+      }
+
+      .grid {
+        margin: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .grid img {
+        width: 100%;
+      }
+      .grid img:hover {
+        filter: contrast(80%);
+        transform: scale(2);
+      }
+      .dark {
+        background: black;
+        color: beige;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark-button">Dark Theme</button>
+    <div class="container">
+      <h1>I love Dancing</h1>
+      <h2>Especially belly dance💃</h2>
+      <a href="https://en.wikipedia.org/wiki/Belly_dance" target="_blank">
+        <img
+          src="https://ramagyasportsacademy.com/wp-content/uploads/2024/09/8-Self-Defense-Moves-Every-Woman-Needs-to-Know-48.png"
+          alt=""
+          class="bellydance-one"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrZWm4ZcAbVrkYrf-xR3d4lyzJ1TGoEld0Tg&s"
+          alt=""
+          class="bellydance-two"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTVxbOAT7rxWxYRL_UcpKF1h_BBViKrz1iXw&s"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcz4sQTB0yh1pd8w5kN6_8afsSCK05Os0pPg&s"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnv9RkIh8wbJHCrQEI4iooPGtq6BKWC5mbKQ&s"
+          alt=""
+        />
+      </div>
+      <p>
+        Belly dance is a Middle Eastern dance that originated in Egypt, which
+        features movements of the hips and torso. A Western-coined exonym, it is
+        also referred to as Middle Eastern dance or Arabic dance.
+        <br />📖<a
+          href="https://en.wikipedia.org/wiki/Belly_dance"
+          target="_blank"
+        >
+          <strong> Learn more on wikipedia </strong></a
+        >
+      </p>
+      <button class="learn-button">Learn belly Dance</button>
+    </div>
+    <footer>Coded by 👸 Eleni Gebremedhin</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let darkButton = document.querySelector(".dark-button");
+      darkButton.addEventListener("click", changeTheme);
+      function learn() {
+        let name = prompt("What is your name?");
+        let email = prompt("what is your email?");
+        alert(
+          "Thank you for choosing us, " +
+            name +
+            ", We will be in touch with you soon."
+        );
+      }
+      let learnButton = document.querySelector(".learn-button");
+      learnButton.addEventListener("click", learn);
+    </script>
+  </body>
+</html>
